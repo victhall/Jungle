@@ -1,0 +1,7 @@
+<tr>
+<th scope="row"><%= item.quantity %></th>
+<td><img style="height: 100px"  src="<%= item.product.image %>"></td>
+<td><%= item.product.name %></td>
+<td><%= item.product.description %></td>
+<td><%= number_to_currency(item.total_price_cents/100) %></td>
+</tr>
