@@ -48,6 +48,13 @@
             <%= fa_icon "shopping-cart" %> My Cart (<%= cart.size %>)
           <% end %>
         </li>
+        <li style="margin-top: 15px">
+          <% if current_user %>
+           <span>Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %></span> 
+          <% else %>
+            <span><%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %></span>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>
